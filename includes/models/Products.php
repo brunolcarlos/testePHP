@@ -7,6 +7,15 @@
  */
 class Products {
 	
+	protected $name;
+	protected $description;
+	protected $price;
+	protected $stock;
+	protected $image;
+
+	public function __construct(){
+		
+	}
 	
 	public function get_products($limit){
 		global $db, $system;

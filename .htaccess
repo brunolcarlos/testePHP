@@ -1,0 +1,48 @@
+# RewriteEngine
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* - [L,QSA]
+
+# Security Control
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|tpl)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Cache Control
+<IfModule mod_headers.c>
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|swf|css|js)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set Connection keep-alive
+</IfModule>
+
+# Gzip Control
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE image/jpg
+AddOutputFilterByType DEFLATE image/jpeg
+AddOutputFilterByType DEFLATE image/png
+AddOutputFilterByType DEFLATE image/gif
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/javascript
+</IfModule>
+
+
+# products
+
+RewriteRule ^product/([^/]+)/?$ product.php?id=$1 [L,QSA]
+RewriteRule ^product/edit/([^/]+)/?$ product.php?id=$1&edit=true [L,QSA]
+
+# 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/* index.php [L,QSA]

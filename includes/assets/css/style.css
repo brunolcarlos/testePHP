@@ -1,0 +1,30 @@
+.btn-primary:focus,
+.btn-primary:active{
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.header{
+	width: 100%;
+	background: #F8F9FA;
+}
+.products{
+	margin-top: 50px !important;
+	overflow-x: auto;
+}
+.small_image_table{
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+}
+.create_product{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.products_header{
+	margin-top: 50px;
+}
+.logo_desktop{
+	padding-left: 0 !important;
+}

@@ -1,10 +1,6 @@
 <?php 
 
-// fetch bootstrap
 
-/**
- * GET PRODUCTS
- */
 class Products {
 	
 	protected $name;
@@ -14,9 +10,13 @@ class Products {
 	protected $image;
 
 	public function __construct(){
-		
+
 	}
+
 	
+	/**
+ 	* GET PRODUCTS
+ 	*/
 	public function get_products($limit){
 		global $db, $system;
 

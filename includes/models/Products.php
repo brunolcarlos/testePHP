@@ -19,10 +19,12 @@ class Products {
 	/**
  	* GET PRODUCTS
  	*/
-	public function get_products($limit){
+	public function get_products($offset = 0){
 		global $db, $system;
 
-		$data = $db->query(sprintf("SELECT * FROM products LIMIT %s", 10)) or die($db->error);
+		$offset *= $system['max_results'];
+
+		$data = $db->query(sprintf("SELECT * FROM products ORDER BY id DESC LIMIT %s, %s ", secure($offset,'int', false), secure($system['max_results'],'int', false))) or die($db->error);
 
 		if ($data->num_rows > 0) {
 			while ($product = $data->fetch_assoc()) {

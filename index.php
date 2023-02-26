@@ -8,7 +8,7 @@ use models\Products;
 
 $products = new Products;
 
-$all_products = $products->get_products(10);
+$all_products = $products->get_products();
 
 $smarty->assign('products', $all_products);
 

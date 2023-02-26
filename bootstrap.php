@@ -10,7 +10,8 @@ require_once(ABSPATH.'includes/config.php');
 
 // set global array with server infomation
 $system = array(
-	"system_url"=> SYS_URL
+	"system_url"=> SYS_URL,
+    "max_results" => 10
 );
 
 

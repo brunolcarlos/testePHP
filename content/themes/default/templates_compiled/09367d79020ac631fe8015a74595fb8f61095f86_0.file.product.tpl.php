@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 18:32:27
+/* Smarty version 3.1.33, created on 2023-02-26 18:55:19
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fb97ab6b8b92_69734307',
+  'unifunc' => 'content_63fb9d07d85a99_16760418',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09367d79020ac631fe8015a74595fb8f61095f86' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/product.tpl',
-      1 => 1677432724,
+      1 => 1677434118,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_body_product.tpl' => 1,
   ),
 ),false)) {
-function content_63fb97ab6b8b92_69734307 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fb9d07d85a99_16760418 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <?php ob_start();
@@ -62,9 +62,27 @@ $_prefixVariable6 = ob_get_clean();
 echo $_prefixVariable6;?>
 
             <?php ob_start();
-}
+} else {
 $_prefixVariable7 = ob_get_clean();
 echo $_prefixVariable7;?>
+
+            <div class="col-8">
+                <h3>Não encontrei o produto que está buscando!</h3>
+            </div>
+            <div class="col-4 arrow_left">
+                <a href="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['system']->value['system_url'];
+$_prefixVariable8 = ob_get_clean();
+echo $_prefixVariable8;?>
+">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    Voltar
+                </a>
+            </div>
+            <?php ob_start();
+}
+$_prefixVariable9 = ob_get_clean();
+echo $_prefixVariable9;?>
 
 		</div>
 	</div>

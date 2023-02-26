@@ -9,11 +9,12 @@ class Products {
 	protected $stock;
 	protected $image;
 
+	//EMPTY
 	public function __construct(){
 
 	}
 
-	
+
 	/**
  	* GET PRODUCTS
  	*/

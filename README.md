@@ -12,7 +12,7 @@ CREATE TABLE
     `description` varchar(255) COLLATE utf8mb4_bin NOT NULL,
     `price` float NOT NULL,
     `stock` int(11) NOT NULL,
-    `image` varchar(255) COLLATE utf8mb4_bin DEFAULT 'NULL',
+    `image` varchar(255) COLLATE utf8mb4_bin DEFAULT '',
     `name` varchar(255) COLLATE utf8mb4_bin NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_bin

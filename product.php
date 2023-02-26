@@ -7,7 +7,7 @@ require('./includes/models/Products.php');
 use models\Products;
 
 if (!is_numeric($_GET['id']) || empty($_GET['id'])) {
-    header("Location : /");
+   echo header("Location: " . SYS_URL . "/");
 }
 
 $products = new Products;

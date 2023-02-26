@@ -64,3 +64,8 @@
 	margin: 10px;
 	display: none;
 }
+
+.arrow_left {
+	display: flex;
+	justify-content: flex-end;
+}

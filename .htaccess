@@ -39,7 +39,7 @@ AddOutputFilterByType DEFLATE text/javascript
 
 # products
 
-RewriteRule ^product/([^/]+)/?$ product.php?id=$1 [L,QSA]
+RewriteRule ^edit/product/([^/]+)/?$ product.php?id=$1 [L,QSA]
 RewriteRule ^product/edit/([^/]+)/?$ product.php?id=$1&edit=true [L,QSA]
 
 # create product

@@ -39,6 +39,27 @@ class Products {
 
 	}
 
+	/**
+ 	* GET PRODUCTS
+ 	*/
+	public function get_product($id){
+		global $db, $system;
+
+
+		$data = $db->query(sprintf("SELECT * FROM products WHERE id = %s", secure($id,'int', false))) or die($db->error);
+
+		if ($data->num_rows > 0) {
+			$product = $data->fetch_assoc();
+
+			$product['price'] = price_format($product['price']);
+			$product['image'] = $product['image'] ? $product['image'] : '';
+			$product['description'] = description($product['description']);
+
+			return $product;
+		}
+
+	}
+
 	public function create_product($args = []){
 		global $db, $system;
 

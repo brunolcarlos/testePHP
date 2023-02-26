@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 17:26:15
+/* Smarty version 3.1.33, created on 2023-02-26 18:41:00
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fb8827177602_04738675',
+  'unifunc' => 'content_63fb99ac9b1844_41165336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bee2d04bdd4716fcce87583e51d5d1fe3b4c27cd' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl',
-      1 => 1677428462,
+      1 => 1677433258,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fb8827177602_04738675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fb99ac9b1844_41165336 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="products">
   <table class="table table-striped">
     <thead class="thead-dark">
@@ -56,7 +56,15 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ">
         </td>
         <td>
-          <a href="#"><i class="fa fa-pencil"></i></a>
+          <a href="<?php ob_start();
+echo $_smarty_tpl->tpl_vars['system']->value['system_url'];
+$_prefixVariable1 = ob_get_clean();
+echo $_prefixVariable1;?>
+/edit/product/<?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['id'];
+$_prefixVariable2 = ob_get_clean();
+echo $_prefixVariable2;?>
+"><i class="fa fa-pencil"></i></a>
         </td>
       </tr>
       <?php

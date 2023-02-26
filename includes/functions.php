@@ -12,6 +12,25 @@ function page_footer($page)
     $smarty->assign('page', $page);
     $smarty->display("$page.tpl");
 }
+/**
+ * api_exit
+ *
+ * @param int $code
+ * @param string $message
+ */
+function api_exit($code, $message) {
+    ob_start();
+    header("Content-Type: application/json");
+    http_response_code($code);
+    echo json_encode(array('status' => $message));
+    header('Connection: close');
+    header('Content-Length: ' . ob_get_length());
+    ob_end_flush();
+    @ob_flush();
+    if ($code >= 400) {
+        exit;
+    }
+}
 
 /* ------------------------------- */
 /* Price Format */
@@ -85,7 +104,7 @@ function secure($value, $type = "", $quoted = true)
             $value = (!is_empty($value)) ? "'+" . $value . "'" : "''";
             break;
             default:
-            $value = (!is_empty($value)) ? "'" . $value . "'" : "''";
+            $value = $value ? "'" . $value . "'" : "''";
             break;
         }
     }

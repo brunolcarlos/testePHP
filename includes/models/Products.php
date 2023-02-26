@@ -39,5 +39,17 @@ class Products {
 
 	}
 
+	public function create_product($args = []){
+		global $db, $system;
+
+		
+		$db->query(sprintf("INSERT INTO products (name, description, price, stock) VALUES (%s, %s, %s, %s) ",
+		 secure($args['name']),secure($args['description']),secure($args['price'],'int'),secure($args['stock'],'int') 
+		)) or die($db->error);
+
+		return $args;
+
+	}
+
 
 }

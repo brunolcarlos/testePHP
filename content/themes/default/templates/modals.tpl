@@ -42,6 +42,7 @@
         <button type="button" class="btn btn-primary js_btn_create_product">Criar produto</button>
       </div>
       <span class="alert alert-warning margin-10 js_alert">Todos os campos são obrigatórios!</span>
+      <span class="alert alert-success margin-10 js_alert_success">Parábens, seu produto foi criado!</span>
     </div>
   </div>
 </div>

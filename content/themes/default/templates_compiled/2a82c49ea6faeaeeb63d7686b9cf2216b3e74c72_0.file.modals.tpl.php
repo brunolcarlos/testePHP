@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 15:17:46
+/* Smarty version 3.1.33, created on 2023-02-26 17:09:20
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/modals.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fb6a0a918124_67344140',
+  'unifunc' => 'content_63fb84307c0927_49070193',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a82c49ea6faeaeeb63d7686b9cf2216b3e74c72' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/modals.tpl',
-      1 => 1677421064,
+      1 => 1677427757,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fb6a0a918124_67344140 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fb84307c0927_49070193 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Start Modal create products -->
 <div id="create_product" class="modal class_create_product" tabindex="-1" style="display: none">
   <div class="modal-dialog">
@@ -65,6 +65,7 @@ function content_63fb6a0a918124_67344140 (Smarty_Internal_Template $_smarty_tpl)
         <button type="button" class="btn btn-primary js_btn_create_product">Criar produto</button>
       </div>
       <span class="alert alert-warning margin-10 js_alert">Todos os campos são obrigatórios!</span>
+      <span class="alert alert-success margin-10 js_alert_success">Parábens, seu produto foi criado!</span>
     </div>
   </div>
 </div>

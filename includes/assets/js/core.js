@@ -8,6 +8,32 @@ $(function () {
 		$('#create_product').modal('show')
 	});
 
+	async function createProdut(product) {
+		await fetch(
+			api.product,
+
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: JSON.stringify({
+					name: product?.name,
+					description: product?.description,
+					price: parseInt(product?.price),
+					stock: parseInt(product?.stock),
+				})
+			}
+		).then(res => {
+			$('input').val('')
+			$('textarea').val('')
+			$('.js_alert').hide()
+			$('.js_alert_success').show()
+
+			setTimeout(() => {
+				$('.js_alert_success').hide()
+			}, 2000);
+		})
+	}
+
 
 	$('body').on('click', '.js_btn_create_product', function (e) {
 		e.preventDefault()
@@ -34,24 +60,8 @@ $(function () {
 			return;
 		}
 
-		fetch(
-			api.product,
+		createProdut(product)
 
-			{
-				method: 'POST',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: JSON.stringify({
-					name: product?.name,
-					description: product?.description,
-					price: parseInt(product?.price),
-					stock: parseInt(product?.stock),
-				})
-			}
-		).then(res => {
-			$('input').val('')
-			$('textarea').val('')
-			$('.js_alert').hide()
-		})
 	});
 
 	$('.product_price').maskMoney({ thousands: ".", precision: false });

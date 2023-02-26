@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 00:35:05
+/* Smarty version 3.1.33, created on 2023-02-26 15:27:33
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fa9b2943a746_11739634',
+  'unifunc' => 'content_63fb6c55a49f14_99477798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '808a307d7d81c551877dc94edea2bb95be58063a' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/head.tpl',
-      1 => 1677368101,
+      1 => 1677421639,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa9b2943a746_11739634 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fb6c55a49f14_99477798 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>testePHP</title>
@@ -39,11 +39,6 @@ function content_63fa9b2943a746_11739634 (Smarty_Internal_Template $_smarty_tpl)
 >
 	<?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['system']->value['system_url'];?>
-/includes/assets/js/core.js?version=<?php echo date('m-d-Y H:i:s.u');?>
-"><?php echo '</script'; ?>
 >
 </head><?php }
 }

@@ -2,6 +2,7 @@
 <html>
 {{include file="head.tpl"}}
 <body>
+	{{include file="_js_files.tpl"}}
 	{{include file="header.tpl" logo="testePHP"}}
 	{{include file="modals.tpl"}}
 	<div class="container">

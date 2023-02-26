@@ -42,7 +42,12 @@ AddOutputFilterByType DEFLATE text/javascript
 RewriteRule ^product/([^/]+)/?$ product.php?id=$1 [L,QSA]
 RewriteRule ^product/edit/([^/]+)/?$ product.php?id=$1&edit=true [L,QSA]
 
+# create product
+RewriteRule ^create/?$ includes/ajax/products/create_product.php [L,QSA]
+
 # 404
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/* index.php [L,QSA]
+
+

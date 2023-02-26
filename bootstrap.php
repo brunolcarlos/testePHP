@@ -8,6 +8,15 @@ define('BASEPATH',dirname($_SERVER['PHP_SELF']));
 require_once(ABSPATH.'includes/config.php');
 
 
+// enviroment settings
+if(DEBUGGING) {
+    ini_set("display_errors", true);
+    error_reporting(E_ALL ^ E_NOTICE);
+} else {
+    ini_set("display_errors", false);
+    error_reporting(0);
+}
+
 // set global array with server infomation
 $system = array(
 	"system_url"=> SYS_URL,

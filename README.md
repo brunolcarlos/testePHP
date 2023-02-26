@@ -4,8 +4,11 @@
 ## Destaque
  O objetivo deste teste não é exibir habilidades com web design e sim com funcionalidades backend com PHP puro.
 
+## Tecnologias
+ Neste projeto utilizei PHP puro, Rotas personalizadas no .htaccess, Smarty, Mysql, Jquery, Bootstrap, Html e Css
+ O objetivo deste projeto foi apresentar minhas habilidades com PHP puro sem a utilização de um FRAMEWORK
 
-#Database
+# Database
 
 ```
 CREATE TABLE

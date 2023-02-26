@@ -12,13 +12,13 @@
       </tr>
     </thead>
     <tbody class='js_products_table'>
-      {foreach $products as $product}
+      {{foreach $products as $product}}}
         <tr class='line_product hide_product{$product['id']}'>
           <th scope="row">{{$product['id']}}</th>
-          <td>{$product['name']}</td>
-          <td>{$product['description']}</td>
-          <td>R${$product['price']}</td>
-          <td>{$product['stock']}</td>
+          <td>{{$product['name']}}</td>
+          <td>{{$product['description']}}}</td>
+          <td>R${{$product['price']}}}</td>
+          <td>{{$product['stock']}}}</td>
           <td>
             <img class="small_image_table" src="{$product['image']}">
           </td>
@@ -27,7 +27,7 @@
             <button class='btn js_delete_product' data-id="{{$product['id']}}"><i class="fa fa-trash text-danger"></i></button>
           </td>
         </tr>
-      {/foreach}
+      {{/foreach}}}
     </tbody>
   </table>
 </div>

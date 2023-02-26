@@ -62,21 +62,21 @@ $(function () {
 			$('.js_alert_success').show()
 
 			$('.js_products_table').prepend(`
-			<tr class='line_product hide_product${res?.id}'>
-				<th scope="row">${res?.id}</th>
-				<td>${product.name}</td>
-				<td>${description(product.description)}</td>
-				<td>R$${product.price}</td>
-				<td>${product.stock}</td>
-				<td>
-				<img class="small_image_table" src="${validImage(product?.image)}">
-				</td>
-				<td>
-				<a class='btn' href="#"><i class="fa fa-pencil text-primary"></i></a>
-				<button class='btn js_delete_product' data-id="${res?.id}"><i class="fa fa-trash text-danger"></i></button>
-				</td>
-			</tr>
-	  `)
+				<tr class='line_product hide_product${res?.id}'>
+					<th scope="row">${res?.id}</th>
+					<td>${product.name}</td>
+					<td>${description(product.description)}</td>
+					<td>R$${product.price}</td>
+					<td>${product.stock}</td>
+					<td>
+					<img class="small_image_table" src="${validImage(product?.image)}">
+					</td>
+					<td>
+					<a class='btn' href="#"><i class="fa fa-pencil text-primary"></i></a>
+					<button class='btn js_delete_product' data-id="${res?.id}"><i class="fa fa-trash text-danger"></i></button>
+					</td>
+				</tr>
+	  		`)
 
 			setTimeout(() => {
 				$('.js_alert_success').hide()

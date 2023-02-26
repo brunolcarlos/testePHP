@@ -23,7 +23,7 @@
           <img class="small_image_table" src="{$product['image']}">
         </td>
         <td>
-          <a href="#"><i class="fa fa-pencil"></i></a>
+          <a href="{{$system['system_url']}}/edit/product/{{$product['id']}}"><i class="fa fa-pencil"></i></a>
         </td>
       </tr>
       {/foreach}

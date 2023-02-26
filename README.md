@@ -1,6 +1,9 @@
 # testePHP
  Teste solicitado em PHP puro com padrão MVC
 
+## Destaque
+ O objetivo deste teste não é exibir habilidades com web design e sim com funcionalidades backend com PHP puro.
+
 
 #Database
 

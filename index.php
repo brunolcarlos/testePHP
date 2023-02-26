@@ -4,8 +4,9 @@
 require('bootstrap.php');
 require('./includes/models/Products.php');
 
+use models\Products;
 
-$products = new Products();
+$products = new Products;
 
 $all_products = $products->get_products(10);
 

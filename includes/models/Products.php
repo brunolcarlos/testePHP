@@ -47,7 +47,7 @@ class Products {
 		 secure($args['name']),secure($args['description']),secure($args['price'],'int'),secure($args['stock'],'int') 
 		)) or die($db->error);
 
-		return $args;
+		return $db->insert_id;
 
 	}
 

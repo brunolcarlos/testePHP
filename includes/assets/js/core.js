@@ -8,6 +8,18 @@ $(function () {
 		$('#create_product').modal('show')
 	});
 
+	function description(text) {
+		return text.length > 30 ?
+			text.substring(0, 30) + '...' :
+			text
+	}
+
+	function validImage(image) {
+		return image != null ?
+			image :
+			site_path + '/content/uploads/notfound.jpeg'
+	}
+
 	async function createProdut(product) {
 		await fetch(
 			api.product,
@@ -20,18 +32,40 @@ $(function () {
 					description: product?.description,
 					price: parseInt(product?.price),
 					stock: parseInt(product?.stock),
+					image: parseInt(product?.image),
 				})
 			}
 		).then(res => {
+
+			return res.json()
+
+		}).then(res => {
 			$('input').val('')
 			$('textarea').val('')
 			$('.js_alert').hide()
 			$('.js_alert_success').show()
 
+			$('.js_products_table').prepend(`
+			<tr>
+				<th scope="row">${res?.id}</th>
+				<td>${product.name}</td>
+				<td>${description(product.description)}</td>
+				<td>R$${product.price}</td>
+				<td>${product.stock}</td>
+				<td>
+				<img class="small_image_table" src="${validImage(product?.image)}">
+				</td>
+				<td>
+				<a href="#"><i class="fa fa-pencil"></i></a>
+				</td>
+			</tr>
+	  `)
+
 			setTimeout(() => {
 				$('.js_alert_success').hide()
 			}, 2000);
-		})
+		}
+		)
 	}
 
 

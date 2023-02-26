@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 00:36:39
+/* Smarty version 3.1.33, created on 2023-02-26 01:46:11
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fa9b87c7f048_80135609',
+  'unifunc' => 'content_63faabd3c5c278_11277197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2c13e78d78dd1f2e3f1726c7642534eb1e20841f' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/index.tpl',
-      1 => 1677368193,
+      1 => 1677372347,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:products.tpl' => 1,
   ),
 ),false)) {
-function content_63fa9b87c7f048_80135609 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63faabd3c5c278_11277197 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <?php ob_start();
@@ -71,7 +71,16 @@ echo $_prefixVariable5;?>
 $_prefixVariable6 = ob_get_clean();
 echo $_prefixVariable6;?>
 
+
+		
 	</div>
+	<footer class='footer'>
+		<div class="container">
+			<div class='footer_info'>
+				<h6>Desenvolvido por Bruno Luiz <a target="_blank" href='https://github.com/brunolcarlos/testePHP'>GITHUB</a></h6>
+			</div>
+		</div>
+	</footer>
 </body>
 </html><?php }
 }

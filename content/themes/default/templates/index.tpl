@@ -20,6 +20,15 @@
 		{{if !empty($products)}}
 		{{include file="products.tpl" products=$products}}
 		{{/if}}
+
+		
 	</div>
+	<footer class='footer'>
+		<div class="container">
+			<div class='footer_info'>
+				<h6>Desenvolvido por Bruno Luiz <a target="_blank" href='https://github.com/brunolcarlos/testePHP'>GITHUB</a></h6>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

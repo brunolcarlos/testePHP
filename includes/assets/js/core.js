@@ -8,6 +8,22 @@ $(function () {
 		$('#create_product').modal('show')
 	});
 
+	$('body').on('click', '.js_delete_product', function (e) {
+		e.preventDefault()
+		var id = $(this).data('id')
+		$('.js_btn_delete_product').data('id', `hide_product${id}`)
+		$('.modal_delete_product').modal('show')
+	});
+
+	$('body').on('click', '.js_btn_delete_product', function (e) {
+		e.preventDefault()
+		var _this = $(this)
+		var id = _this.data('id')
+		console.log(`.${id}`)
+		$(`.${id}`).hide()
+		$('.modal_delete_product').modal('hide')
+	});
+
 	function description(text) {
 		return text.length > 30 ?
 			text.substring(0, 30) + '...' :
@@ -46,7 +62,7 @@ $(function () {
 			$('.js_alert_success').show()
 
 			$('.js_products_table').prepend(`
-			<tr>
+			<tr class='line_product hide_product${res?.id}'>
 				<th scope="row">${res?.id}</th>
 				<td>${product.name}</td>
 				<td>${description(product.description)}</td>
@@ -56,7 +72,8 @@ $(function () {
 				<img class="small_image_table" src="${validImage(product?.image)}">
 				</td>
 				<td>
-				<a href="#"><i class="fa fa-pencil"></i></a>
+				<a class='btn' href="#"><i class="fa fa-pencil text-primary"></i></a>
+				<button class='btn js_delete_product' data-id="${res?.id}"><i class="fa fa-trash text-danger"></i></button>
 				</td>
 			</tr>
 	  `)

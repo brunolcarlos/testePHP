@@ -47,3 +47,25 @@
   </div>
 </div>
 <!-- End Modal create products -->
+
+<!-- Start Modal create delete tr products -->
+<div class="modal modal_delete_product">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Deletar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <div class="modal-body">
+          <h6>Você deseja deletar este produto ?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button data-id="" type="button" class="btn btn-primary js_btn_delete_product">Deletar</button>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal create delete tr products -->

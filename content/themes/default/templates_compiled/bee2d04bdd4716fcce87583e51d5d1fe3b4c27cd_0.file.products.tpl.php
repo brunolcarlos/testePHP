@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 00:34:48
+/* Smarty version 3.1.33, created on 2023-02-26 17:26:15
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fa9b18eb2bc3_65309294',
+  'unifunc' => 'content_63fb8827177602_04738675',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bee2d04bdd4716fcce87583e51d5d1fe3b4c27cd' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl',
-      1 => 1677368009,
+      1 => 1677428462,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa9b18eb2bc3_65309294 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fb8827177602_04738675 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="products">
   <table class="table table-striped">
     <thead class="thead-dark">
@@ -34,7 +34,7 @@ function content_63fa9b18eb2bc3_65309294 (Smarty_Internal_Template $_smarty_tpl)
         <th scope="col">Edit</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class='js_products_table'>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
 if ($_from !== null) {

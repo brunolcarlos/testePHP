@@ -11,7 +11,7 @@
         <th scope="col">Edit</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class='js_products_table'>
       {foreach $products as $product}
         <tr>
         <th scope="row">{$product['id']}</th>

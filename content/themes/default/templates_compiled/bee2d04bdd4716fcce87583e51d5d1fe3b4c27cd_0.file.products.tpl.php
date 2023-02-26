@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 23:07:29
+/* Smarty version 3.1.33, created on 2023-02-27 00:26:20
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_63fbd82116f719_12039727',
+  'unifunc' => 'content_63fbea9c576dd3_69034883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bee2d04bdd4716fcce87583e51d5d1fe3b4c27cd' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/products.tpl',
-      1 => 1677449246,
+      1 => 1677453978,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fbd82116f719_12039727 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fbea9c576dd3_69034883 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="products">
   <table class="table table-striped">
     <thead class="thead-dark">
@@ -35,26 +35,43 @@ function content_63fbd82116f719_12039727 (Smarty_Internal_Template $_smarty_tpl)
       </tr>
     </thead>
     <tbody class='js_products_table'>
-      <?php
+      <?php ob_start();
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
-?>
-        <tr class='line_product hide_product<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+$_prefixVariable1 = ob_get_clean();
+echo $_prefixVariable1;?>
+
+        <tr class='line_product hide_product<?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['id'];
+$_prefixVariable2 = ob_get_clean();
+echo $_prefixVariable2;?>
 '>
           <th scope="row"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['product']->value['id'];
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;?>
+$_prefixVariable3 = ob_get_clean();
+echo $_prefixVariable3;?>
 </th>
-          <td><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
+          <td><?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['name'];
+$_prefixVariable4 = ob_get_clean();
+echo $_prefixVariable4;?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['product']->value['description'];?>
-</td>
-          <td>R$<?php echo $_smarty_tpl->tpl_vars['product']->value['price'];?>
-</td>
-          <td><?php echo $_smarty_tpl->tpl_vars['product']->value['stock'];?>
-</td>
+          <td><?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['description'];
+$_prefixVariable5 = ob_get_clean();
+echo $_prefixVariable5;?>
+}</td>
+          <td>R$<?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['price'];
+$_prefixVariable6 = ob_get_clean();
+echo $_prefixVariable6;?>
+}</td>
+          <td><?php ob_start();
+echo $_smarty_tpl->tpl_vars['product']->value['stock'];
+$_prefixVariable7 = ob_get_clean();
+echo $_prefixVariable7;?>
+}</td>
           <td>
             <img class="small_image_table" src="<?php echo $_smarty_tpl->tpl_vars['product']->value['image'];?>
 ">
@@ -62,24 +79,27 @@ echo $_prefixVariable1;?>
           <td>
             <a class='btn' href="<?php ob_start();
 echo $_smarty_tpl->tpl_vars['system']->value['system_url'];
-$_prefixVariable2 = ob_get_clean();
-echo $_prefixVariable2;?>
+$_prefixVariable8 = ob_get_clean();
+echo $_prefixVariable8;?>
 /edit/product/<?php ob_start();
 echo $_smarty_tpl->tpl_vars['product']->value['id'];
-$_prefixVariable3 = ob_get_clean();
-echo $_prefixVariable3;?>
+$_prefixVariable9 = ob_get_clean();
+echo $_prefixVariable9;?>
 "><i class="fa fa-pencil text-primary"></i></a>
             <button class='btn js_delete_product' data-id="<?php ob_start();
 echo $_smarty_tpl->tpl_vars['product']->value['id'];
-$_prefixVariable4 = ob_get_clean();
-echo $_prefixVariable4;?>
+$_prefixVariable10 = ob_get_clean();
+echo $_prefixVariable10;?>
 "><i class="fa fa-trash text-danger"></i></button>
           </td>
         </tr>
-      <?php
+      <?php ob_start();
 }
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+$_prefixVariable11 = ob_get_clean();
+echo $_prefixVariable11;?>
+
     </tbody>
   </table>
 </div><?php }

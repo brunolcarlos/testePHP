@@ -110,3 +110,11 @@ function secure($value, $type = "", $quoted = true)
     }
     return $value;
 }
+
+/* ------------------------------- */
+/* GET POST HTTP REQUEST */
+/* ------------------------------- */
+
+function post_request(){
+    return json_decode(file_get_contents("php://input"),true);
+}

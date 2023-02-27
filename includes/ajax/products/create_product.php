@@ -5,7 +5,7 @@ require('../../models/Products.php');
 
 use models\Products;
 
-$_POST = json_decode(file_get_contents("php://input"),true);
+$_POST = post_request();
 
 if (!is_numeric($_POST['stock']) || empty($_POST['stock'])) {
     api_exit(500, "Stock é obrigatório!");

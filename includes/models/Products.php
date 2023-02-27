@@ -60,6 +60,9 @@ class Products {
 
 	}
 
+	/**
+ 	* CREATE PRODUCTS
+ 	*/
 	public function create_product($args = []){
 		global $db, $system;
 
@@ -69,6 +72,17 @@ class Products {
 		)) or die($db->error);
 
 		return $db->insert_id;
+
+	}
+
+	/**
+ 	* DELETE PRODUCTS
+ 	*/
+	public function delete_product($id){
+		global $db;
+
+		$db->query(sprintf("DELETE FROM products WHERE id = %s ",secure($id, 'int', false))) or die($db->error);
+		return true;
 
 	}
 

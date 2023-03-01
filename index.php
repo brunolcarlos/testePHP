@@ -5,9 +5,8 @@ require('bootstrap.php');
 
 use App\models\Products;
 
-$products = new Products;
 
-$all_products = $products->get_products();
+$all_products = Products::get_products();
 
 $smarty->assign('products', $all_products);
 

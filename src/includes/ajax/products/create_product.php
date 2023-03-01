@@ -24,11 +24,14 @@ if (empty($_POST['name'])) {
 
 try {
 
-    $product = new Products;
-    $create = $product->create_product( $_POST );
-    
-
-    echo json_encode(array('response' => 'success', 'id'=> $create  ));
+    $product = new Products(
+        $_POST['name'],
+        $_POST['description'],
+        $_POST['price'],
+        $_POST['stock'],
+    );
+ 
+    echo json_encode(array('response' => 'success', 'id'=> $product->getId()  ));
 
 } catch (Exception $e) {
     echo json_encode(array('error' => $e->getMessage() ));

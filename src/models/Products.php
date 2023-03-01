@@ -4,22 +4,65 @@ namespace App\models;
 
 class Products {
 	
+	protected $id;
 	protected $name;
 	protected $description;
 	protected $price;
 	protected $stock;
 	protected $image;
 
-	//EMPTY
-	public function __construct(){
+	public function __construct(string $name, string $description, float $price, int $stock, string $image = ''){
+		
+		$this->name = $name;
+		$this->description = $description;
+		$this->price = $price;
+		$this->stock = $stock;
+		$this->image = $image;
 
+		$args = array(
+			'name' => $this->name, 
+			'description' => $this->description, 
+			'price' => $this->price, 
+			'stock' => $this->stock, 
+			'image' => $this->image, 
+		);
+
+		//CREATE PRODUCT ON DATABASE
+		$this->save($args);
 	}
 
+	/**
+ 	* SET PRODUCT ID
+ 	*/
+	private function setId($id){
+		return $this->id = $id;
+	}
+
+	/**
+ 	* GET PRODUCT ID
+ 	*/
+	public function getId(){
+		return $this->id;
+	}
+
+	/**
+ 	* CREATE PRODUCTS
+ 	*/
+	public function save($args = []){
+		global $db, $system;
+
+		$db->query(sprintf("INSERT INTO products (name, description, price, stock) VALUES (%s, %s, %s, %s) ",
+		 secure($args['name']),secure($args['description']),secure($args['price'],'int'),secure($args['stock'],'int') 
+		)) or die($db->error);
+
+		$this->setId($db->insert_id);
+
+	}
 
 	/**
  	* GET PRODUCTS
  	*/
-	public function get_products($offset = 0){
+	public static function get_products($offset = 0){
 		global $db, $system;
 
 		$offset *= $system['max_results'];
@@ -42,7 +85,7 @@ class Products {
 	/**
  	* GET PRODUCTS
  	*/
-	public function get_product($id){
+	public static function get_product($id){
 		global $db, $system;
 
 
@@ -61,30 +104,14 @@ class Products {
 	}
 
 	/**
- 	* CREATE PRODUCTS
- 	*/
-	public function create_product($args = []){
-		global $db, $system;
-
-		
-		$db->query(sprintf("INSERT INTO products (name, description, price, stock) VALUES (%s, %s, %s, %s) ",
-		 secure($args['name']),secure($args['description']),secure($args['price'],'int'),secure($args['stock'],'int') 
-		)) or die($db->error);
-
-		return $db->insert_id;
-
-	}
-
-	/**
  	* DELETE PRODUCTS
  	*/
-	public function delete_product($id){
+	public static function delete_product($id){
 		global $db;
 
 		$db->query(sprintf("DELETE FROM products WHERE id = %s ",secure($id, 'int', false))) or die($db->error);
 		return true;
 
 	}
-
 
 }

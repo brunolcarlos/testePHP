@@ -11,9 +11,8 @@ if (!is_numeric($_POST['id']) || empty($_POST['id'])) {
 }
 
 try {
-    $product = new Products;
 
-    if ($product->delete_product($_POST['id'])) {
+    if (Products::delete_product($_POST['id'])) {
          api_exit(200, "Produto deletado!");
          return;
     }

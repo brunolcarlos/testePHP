@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 15:27:33
+/* Smarty version 4.3.0, created on 2023-03-01 14:04:42
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_63fb6c55a49f14_99477798',
+  'version' => '4.3.0',
+  'unifunc' => 'content_63ff4d6a0c6a12_56452859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fb6c55a49f14_99477798 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ff4d6a0c6a12_56452859 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>testePHP</title>

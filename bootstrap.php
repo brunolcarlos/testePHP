@@ -1,10 +1,12 @@
 <?php
+
 // set absolut & base path
 define('ABSPATH',dirname(__FILE__).'/');
 define('BASEPATH',dirname($_SERVER['PHP_SELF']));
 
 
 // get system configurations
+require_once(ABSPATH.'vendor/autoload.php');
 require_once(ABSPATH.'includes/config.php');
 
 
@@ -38,7 +40,7 @@ require_once(ABSPATH.'includes/functions.php');
 
 
 // smarty config
-require_once(ABSPATH.'includes/libs/Smarty/Smarty.class.php');
+
 $smarty = new Smarty;
 $smarty->template_dir = ABSPATH.'content/themes/default/templates';
 $smarty->compile_dir = ABSPATH.'content/themes/default/templates_compiled';

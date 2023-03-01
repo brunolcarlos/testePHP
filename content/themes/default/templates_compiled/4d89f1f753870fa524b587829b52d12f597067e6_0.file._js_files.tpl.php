@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 15:27:33
+/* Smarty version 4.3.0, created on 2023-03-01 14:04:42
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/_js_files.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_63fb6c55a95b63_92255344',
+  'version' => '4.3.0',
+  'unifunc' => 'content_63ff4d6a105090_69073604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fb6c55a95b63_92255344 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ff4d6a105090_69073604 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;
+$_prefixVariable8 = ob_get_clean();
+echo $_prefixVariable8;
 echo '<script'; ?>
  type="text/javascript">var site_path = "<?php ob_start();
 echo $_smarty_tpl->tpl_vars['system']->value['system_url'];
-$_prefixVariable2 = ob_get_clean();
-echo $_prefixVariable2;?>
+$_prefixVariable9 = ob_get_clean();
+echo $_prefixVariable9;?>
 ";var ajax_path = site_path+"/includes/ajax/";<?php echo '</script'; ?>
 ><?php ob_start();
-$_prefixVariable3 = ob_get_clean();
-echo $_prefixVariable3;?>
+$_prefixVariable10 = ob_get_clean();
+echo $_prefixVariable10;?>
 
 
 <?php echo '<script'; ?>

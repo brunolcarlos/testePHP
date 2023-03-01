@@ -2,9 +2,8 @@
 
 // fetch bootstrap
 require('bootstrap.php');
-require('./includes/models/Products.php');
 
-use models\Products;
+use App\models\Products;
 
 if (!is_numeric($_GET['id']) || empty($_GET['id'])) {
    echo header("Location: " . SYS_URL . "/");

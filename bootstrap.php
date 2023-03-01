@@ -7,7 +7,7 @@ define('BASEPATH',dirname($_SERVER['PHP_SELF']));
 
 // get system configurations
 require_once(ABSPATH.'vendor/autoload.php');
-require_once(ABSPATH.'includes/config.php');
+require_once(ABSPATH.'src/includes/config.php');
 
 
 // enviroment settings
@@ -36,14 +36,14 @@ $db->query("SET time_zone = '+0:00'");
 
 
 // get functions
-require_once(ABSPATH.'includes/functions.php');
+require_once(ABSPATH.'src/includes/functions.php');
 
 
 // smarty config
 
 $smarty = new Smarty;
-$smarty->template_dir = ABSPATH.'content/themes/default/templates';
-$smarty->compile_dir = ABSPATH.'content/themes/default/templates_compiled';
+$smarty->template_dir = ABSPATH.'src/content/themes/default/templates';
+$smarty->compile_dir = ABSPATH.'src/content/themes/default/templates_compiled';
 $smarty->loadFilter('output', 'trimwhitespace');
 
 

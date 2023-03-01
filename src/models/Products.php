@@ -29,7 +29,7 @@ class Products {
 		if ($data->num_rows > 0) {
 			while ($product = $data->fetch_assoc()) {
 				$product['price'] = price_format($product['price']);
-				$product['image'] = $product['image'] ? $product['image'] : $system['system_url'].'/content/uploads/notfound.jpeg';
+				$product['image'] = $product['image'] ? $product['image'] : $system['system_url'].'/src/content/uploads/notfound.jpeg';
 				$product['description'] = description($product['description']);
 				$products[] = $product;
 			}

@@ -9,9 +9,7 @@ if (!is_numeric($_GET['id']) || empty($_GET['id'])) {
    echo header("Location: " . SYS_URL . "/");
 }
 
-$products = new Products;
-
-$product = $products->get_product($_GET['id']);
+$product = Products::get_product($_GET['id']);
 
 $smarty->assign('product', $product);
 

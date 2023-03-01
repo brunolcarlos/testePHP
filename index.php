@@ -2,9 +2,8 @@
 
 // fetch bootstrap
 require('bootstrap.php');
-require('./includes/models/Products.php');
 
-use models\Products;
+use App\models\Products;
 
 $products = new Products;
 

@@ -1,9 +1,8 @@
 <?php
 
 require('../../../bootstrap.php');
-require('../../models/Products.php');
 
-use models\Products;
+use App\models\Products;
 
 $_POST = post_request();
 

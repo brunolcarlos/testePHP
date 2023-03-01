@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2023-02-26 23:04:36
+/* Smarty version 4.3.0, created on 2023-03-01 14:04:42
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/modals.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_63fbd774d5ede3_10369706',
+  'version' => '4.3.0',
+  'unifunc' => 'content_63ff4d6a162316_46663953',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fbd774d5ede3_10369706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ff4d6a162316_46663953 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Start Modal create products -->
 <div id="create_product" class="modal class_create_product" tabindex="-1" style="display: none">
   <div class="modal-dialog">

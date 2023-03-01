@@ -43,10 +43,10 @@ RewriteRule ^edit/product/([^/]+)/?$ product.php?id=$1 [L,QSA]
 RewriteRule ^product/edit/([^/]+)/?$ product.php?id=$1&edit=true [L,QSA]
 
 # create product
-RewriteRule ^create/?$ includes/ajax/products/create_product.php [L,QSA]
+RewriteRule ^create/?$ src/includes/ajax/products/create_product.php [L,QSA]
 
 # delete product
-RewriteRule ^delete/?$ includes/ajax/products/remove_product.php [L,QSA]
+RewriteRule ^delete/?$ src/includes/ajax/products/remove_product.php [L,QSA]
 
 # 404
 RewriteCond %{REQUEST_FILENAME} !-f

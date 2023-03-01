@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-01 14:04:42
+/* Smarty version 4.3.0, created on 2023-03-01 15:57:00
   from '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63ff4d6a0c6a12_56452859',
+  'unifunc' => 'content_63ff67bcd02bc8_30618330',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '808a307d7d81c551877dc94edea2bb95be58063a' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/testePHP/content/themes/default/templates/head.tpl',
-      1 => 1677421639,
+      1 => 1677682564,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ff4d6a0c6a12_56452859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ff67bcd02bc8_30618330 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>testePHP</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['system']->value['system_url'];?>
-/includes/assets/css/style.css?version=<?php echo date('m-d-Y H:i:s.u');?>
+/src/includes/assets/css/style.css?version=<?php echo date('m-d-Y H:i:s.u');?>
 ">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<?php echo '<script'; ?>
